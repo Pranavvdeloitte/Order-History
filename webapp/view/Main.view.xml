@@ -1,0 +1,283 @@
+<mvc:View
+    controllerName="zorderhistory.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:m="sap.m"
+    xmlns:t="sap.ui.table"
+>
+    <Page
+        id="idMainPage"
+        title="Order History Details"
+    >
+        <fb:FilterBar
+            id="idFilterBar"
+            useToolbar="false"
+            clear="onClearFilter"
+            search="onSearch"
+            filterChange="onFilterChange"
+            showFilterConfiguration="true"
+            showGoOnFB="true"
+            filterBarExpanded="true"
+            showClearOnFB="true"
+        >
+            <fb:filterGroupItems>
+                <fb:FilterGroupItem
+                    name="A"
+                    label="ASN Number"
+                    groupName="Group1"
+                    visibleInFilterBar="true"
+                >
+                    <fb:control>
+                        <Input id="idAsnNo" />
+                    </fb:control>
+                </fb:FilterGroupItem>
+                <fb:FilterGroupItem
+                    name="B"
+                    label="Invoice Number"
+                    groupName="Group1"
+                    visibleInFilterBar="true"
+                >
+                    <fb:control>
+                        <Input id="idInvoiceNo" />
+                    </fb:control>
+                </fb:FilterGroupItem>
+                <fb:FilterGroupItem
+                    name="C"
+                    label="PO"
+                    groupName="Group1"
+                    visibleInFilterBar="true"
+                >
+                    <fb:control>
+                        <Input id="idPo" />
+                    </fb:control>
+                </fb:FilterGroupItem>
+                <fb:FilterGroupItem
+                    name="D"
+                    label="ASN Status"
+                    groupName="Group1"
+                    visibleInFilterBar="true"
+                >
+                    <fb:control>
+                        <Input id="idAsnStatus" />
+                    </fb:control>
+                </fb:FilterGroupItem>
+            </fb:filterGroupItems>
+        </fb:FilterBar>
+        <!-- <ScrollContainer horizontal="true" focusable="true" vertical="true">
+        <Table
+            id="idOrderHistoryTable"
+            items="{localDataModel>/}"
+            mode="None"
+            selectionChange="onSelectionChange"
+            growing="true"
+            sticky="ColumnHeaders,HeaderToolbar"
+            growingThreshold="30"
+            alternateRowColors="true"
+        >
+            <columns>
+                <Column width="8rem">
+                    <Text text="ASN Number" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="Invoice Number" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="PO" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="ASN Status" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="GRN" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="GRN Status" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="MIRO" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="MIRO Status" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="MIRO Base Price" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="MIRO CGST" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="MIRO SGST" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="MIRO IGST" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="Payment" />
+                </Column>
+                <Column width="8rem">
+                    <Text text="Payment UTR" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{localDataModel>ASN Number}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>Invoice Number}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>PO}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>ASn Status}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>GRN}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>GRN Status}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>MIRO}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>MIRO Status}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>MIRO Base Price}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>MIRO CGST}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>MIRO SGST}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>MIRO IGST}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>Payment}" />
+                    </cells>
+                    <cells>
+                        <Text text="{localDataModel>Payment UTR}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        </ScrollContainer> -->
+        <t:Table
+            id="idOrderHistoryTable"
+            rows="{localDataModel>/}"
+            selectionMode="None"
+            ariaLabelledBy="title"
+            alternateRowColors="true"
+            visibleRowCount="20" rowActionCount="1"
+        >
+            <t:rowActionTemplate>
+                <t:RowAction>
+                    <t:items>
+                        <t:RowActionItem
+                            type="Navigation"
+                            press="onRowNavigation"
+                        />
+                    </t:items>
+                </t:RowAction>
+            </t:rowActionTemplate>
+            <t:columns>
+                <t:Column autoResizable="true">
+                    <m:Label text="ASN Number" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>ASN Number}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="Invoice Number" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>Invoice Number}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="PO" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>PO}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="ASN Status" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>ASN Status}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="GRN" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>GRN}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="GRN Status" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>GRN Status}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="MIRO" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>MIRO}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="Base Price" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>Base Price}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="Taxes" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>Taxes}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+                <t:Column autoResizable="true">
+                    <m:Label text="MIRO Status" />
+                    <t:template>
+                        <m:Text
+                            text="{localDataModel>MIRO Status}"
+                            wrapping="false"
+                        />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+        </t:Table>
+    </Page>
+</mvc:View>

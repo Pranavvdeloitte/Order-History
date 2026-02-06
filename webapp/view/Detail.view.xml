@@ -1,0 +1,371 @@
+<mvc:View
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:upload="sap.m.upload"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    controllerName="zorderhistory.controller.Detail"
+    displayBlock="true"
+    class="sapUiSizeCompact"
+>
+    <App id="idAppD">
+        <pages>
+            <Page
+                id="idPageD"
+                class="sapUiResponsiveContentPadding"
+                showHeader="false"
+            >
+                <content>
+                    <uxap:ObjectPageLayout
+                        id="idObjPageD"
+                        upperCaseAnchorBar="false"
+                    >
+                        <uxap:headerTitle>
+                            <uxap:ObjectPageDynamicHeaderTitle id="idObjPageD1">
+                                <uxap:heading>
+                                    <FlexBox
+                                        id="idFlexBoxD"
+                                        alignItems="Center"
+                                    >
+                                        <Avatar
+                                            id="idAvatarD"
+                                            src="sap-icon://account"
+                                            displayShape="Square"
+                                            displaySize="M"
+                                            customDisplaySize="3rem"
+                                            customFontSize="1.125rem"
+                                            imageFitType="Cover"
+                                            backgroundColor="Accent6"
+                                            class="sapUiTinyMarginEnd"
+                                        />
+                                        <VBox id="idVboxD1">
+                                            <HBox
+                                                id="idHboxD1"
+                                                alignItems="Center"
+                                            >
+                                                <ObjectStatus
+                                                    title=" ASN Status"
+                                                    id="idObjStatusD"
+                                                />
+                                            </HBox>
+                                            <HBox
+                                                id="idHboxD2"
+                                                alignItems="Center"
+                                            >
+                                                <ObjectStatus
+                                                    title=" ASN Number"
+                                                    id="idObjNumberD"
+                                                />
+                                            </HBox>
+                                        </VBox>
+                                    </FlexBox>
+                                </uxap:heading>
+                            </uxap:ObjectPageDynamicHeaderTitle>
+                        </uxap:headerTitle>
+
+                        <uxap:sections>
+                            <uxap:ObjectPageSection
+                                id="idObjPageSectionD1"
+                                titleUppercase="true"
+                                title="General Information"
+                            >
+                                <uxap:subSections>
+                                    <uxap:ObjectPageSubSection
+                                        id="idObjPageSubSectionD1"
+                                        titleUppercase="true"
+                                    >
+                                        <uxap:blocks>
+                                            <VBox>
+                                                <f:SimpleForm
+                                                    id="idFormD1"
+                                                    editable="false"
+                                                    layout="ResponsiveGridLayout"
+                                                    maxContainerCols="2"
+                                                    labelSpanL="4"
+                                                    labelSpanM="6"
+                                                    emptySpanL="1"
+                                                    emptySpanM="1"
+                                                    columnsL="2"
+                                                    columnsM="2"
+                                                >
+                                                    <f:content>
+                                                        <Label
+                                                            id="idLabelD1"
+                                                            text="PO Number"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD1"
+                                                            Text=""
+                                                        />
+
+                                                        <Label
+                                                            id="idLabelD2"
+                                                            text="Supplier"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD2"
+                                                            Text=""
+                                                        />
+
+                                                        <Label
+                                                            id="idLabelD3"
+                                                            text="Invoice Number"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD3"
+                                                            Text=""
+                                                        />
+
+                                                        <Label
+                                                            id="idLabelD4"
+                                                            text="Invoice Date"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD4"
+                                                            Text=""
+                                                        />
+                                                    </f:content>
+                                                </f:SimpleForm>
+                                            </VBox>
+                                            <VBox>
+                                                <f:SimpleForm
+                                                    id="idFormD2"
+                                                    editable="false"
+                                                    layout="ResponsiveGridLayout"
+                                                    maxContainerCols="2"
+                                                    labelSpanL="4"
+                                                    labelSpanM="6"
+                                                    emptySpanL="1"
+                                                    emptySpanM="1"
+                                                    columnsL="2"
+                                                    columnsM="2"
+                                                >
+                                                    <f:content>
+                                                        <Label
+                                                            id="idLabelD5"
+                                                            text="Challan Number"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD5"
+                                                            Text=""
+                                                        />
+                                                        <Label
+                                                            id="idLabelD6"
+                                                            text="Eway Bill"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD6"
+                                                            Text=""
+                                                        />
+                                                        <Label
+                                                            id="idLabelD7"
+                                                            text="Vehicle Reg No."
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD7"
+                                                            Text=""
+                                                        />
+                                                        <Label
+                                                            id="idLabelD8"
+                                                            text="Driver Name"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD8"
+                                                            Text=""
+                                                        />
+                                                    </f:content>
+                                                </f:SimpleForm>
+                                            </VBox>
+                                            <VBox>
+                                                <f:SimpleForm
+                                                    id="idFormD3"
+                                                    editable="false"
+                                                    layout="ResponsiveGridLayout"
+                                                    maxContainerCols="2"
+                                                    labelSpanL="4"
+                                                    labelSpanM="6"
+                                                    emptySpanL="1"
+                                                    emptySpanM="1"
+                                                    columnsL="2"
+                                                    columnsM="2"
+                                                >
+                                                    <f:content>
+                                                        <Label
+                                                            id="idLabelD9"
+                                                            text="Vehicle Type"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD9"
+                                                            Text=""
+                                                        />
+                                                        <Label
+                                                            id="idLabelD10"
+                                                            text="Transporter name"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD10"
+                                                            Text=""
+                                                        />
+                                                    </f:content>
+                                                </f:SimpleForm>
+                                            </VBox>
+                                        </uxap:blocks>
+                                    </uxap:ObjectPageSubSection>
+                                </uxap:subSections>
+                            </uxap:ObjectPageSection>
+                            <uxap:ObjectPageSection
+                                id="idObjPageSectionD2"
+                                titleUppercase="false"
+                                title="Items"
+                            >
+                                <uxap:subSections>
+                                    <uxap:ObjectPageSubSection
+                                        id="idObjPageSubSectionD2"
+                                        titleUppercase="false"
+                                    >
+                                        <uxap:blocks>
+                                            <Table
+                                                id="idItemsTable"
+                                                headerText="Items ()"
+                                            >
+                                                <columns>
+                                                    <Column>
+                                                        <Label
+                                                            text="PO Line Item"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="PO"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="Open Quantity"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="Per Unit Price"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="Ship Quantity"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="Ship Quantity Price"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="Batch"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="Manf Date"
+                                                        />
+                                                    </Column>
+                                                    <Column>
+                                                        <Label
+                                                            text="Expire Date"
+                                                        />
+                                                    </Column>
+                                                </columns>
+                                                <items>
+                                                    <ColumnListItem>
+                                                        <cells>
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                            <ObjectAttribute />
+                                                        </cells>
+                                                    </ColumnListItem>
+                                                </items>
+                                            </Table>
+                                        </uxap:blocks>
+                                    </uxap:ObjectPageSubSection>
+                                </uxap:subSections>
+                            </uxap:ObjectPageSection>
+                            <uxap:ObjectPageSection
+                                id="idObjPageSectionD3"
+                                titleUppercase="false"
+                                title="Attachments"
+                            >
+                                <uxap:subSections>
+                                    <uxap:ObjectPageSubSection
+                                        id="idObjPageSubSectionD3"
+                                        titleUppercase="false"
+                                    >
+                                        <uxap:blocks>
+                                            <VBox alignItems="Start">
+                                                <f:SimpleForm
+                                                    id="idFormD7"
+                                                    editable="false"
+                                                    layout="ResponsiveGridLayout"
+                                                    maxContainerCols="6"
+                                                    labelSpanL="4"
+                                                    labelSpanM="6"
+                                                    emptySpanL="1"
+                                                    emptySpanM="1"
+                                                    columnsL="2"
+                                                    columnsM="2"
+                                                >
+                                                    <f:content>
+                                                        <Label 
+                                                            id="idLabelD20"
+                                                            text="Upload"
+                                                            design="Bold"
+                                                        />
+                                                        <Text
+                                                            id="idTextD20"
+                                                            Text=""
+                                                        />
+                                                    </f:content>
+                                                </f:SimpleForm>
+                                            </VBox>
+                                        </uxap:blocks>
+                                    </uxap:ObjectPageSubSection>
+                                </uxap:subSections>
+                            </uxap:ObjectPageSection>
+                        </uxap:sections>
+                    </uxap:ObjectPageLayout>
+<Button
+    text="Scan Barcode"
+    press="onScanBarcode"
+    icon="sap-icon://bar-code" />
+    <Input id="idInputBarcode" value=""/>
+    <Image
+    width="200px"
+    height="200px"
+    src="{
+        path: 'localDataModel>/qrUrl',
+        formatter: '.formatQrCode'
+    }" />
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
