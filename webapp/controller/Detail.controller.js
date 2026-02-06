@@ -18,12 +18,8 @@ sap.ui.define([
                 + encodeURIComponent(sUrl);
         },
         onAfterRendering: function () {
-            const Id = "MAT12345";
-            const sDeepLink = "https://pranavvdeloitte.github.io/Order-History/Qr.html";
-                // window.location.origin +
-                // window.location.pathname +
-                // "#/display?id=" +
-                // Id;
+            const sDeepLink = "https://pranavvdeloitte.github.io/Order-History/qr.html";
+            // window.location.origin + window.location.pathname + "#/display?id=" + Id;
             this.getView().getModel("localDataModel").setProperty("/qrUrl", sDeepLink);
         }
     });

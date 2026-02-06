@@ -249,9 +249,7 @@
                                                         />
                                                     </Column>
                                                     <Column>
-                                                        <Label
-                                                            text="PO"
-                                                        />
+                                                        <Label text="PO" />
                                                     </Column>
                                                     <Column>
                                                         <Label
@@ -274,9 +272,7 @@
                                                         />
                                                     </Column>
                                                     <Column>
-                                                        <Label
-                                                            text="Batch"
-                                                        />
+                                                        <Label text="Batch" />
                                                     </Column>
                                                     <Column>
                                                         <Label
@@ -334,7 +330,7 @@
                                                     columnsM="2"
                                                 >
                                                     <f:content>
-                                                        <Label 
+                                                        <Label
                                                             id="idLabelD20"
                                                             text="Upload"
                                                             design="Bold"
@@ -352,13 +348,14 @@
                             </uxap:ObjectPageSection>
                         </uxap:sections>
                     </uxap:ObjectPageLayout>
-    <Image
-    width="200px"
-    height="200px"
-    src="{
+                    <Image
+                        width="200px"
+                        height="200px"
+                        src="{
         path: 'localDataModel>/qrUrl',
         formatter: '.formatQrCode'
-    }" />
+    }"
+                    />
                 </content>
             </Page>
         </pages>
