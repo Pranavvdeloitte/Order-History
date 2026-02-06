@@ -352,11 +352,6 @@
                             </uxap:ObjectPageSection>
                         </uxap:sections>
                     </uxap:ObjectPageLayout>
-<Button
-    text="Scan Barcode"
-    press="onScanBarcode"
-    icon="sap-icon://bar-code" />
-    <Input id="idInputBarcode" value=""/>
     <Image
     width="200px"
     height="200px"
