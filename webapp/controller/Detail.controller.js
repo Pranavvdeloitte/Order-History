@@ -19,6 +19,7 @@ sap.ui.define([
         },
         onAfterRendering: function () {
             const sDeepLink = "https://pranavvdeloitte.github.io/Order-History/qr.html?id=MAT123&name=Steel&qty=25";
+            
             // window.location.origin + window.location.pathname + "#/display?id=" + Id;
             this.getView().getModel("localDataModel").setProperty("/qrUrl", sDeepLink);
         }
