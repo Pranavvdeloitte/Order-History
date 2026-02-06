@@ -15,9 +15,14 @@
   <script>
     const params = new URLSearchParams(window.location.search);
 
-    document.getElementById("id").innerText = "A";
-    document.getElementById("name").innerText = "B";
-    document.getElementById("qty").innerText = "C";
+    document.getElementById("id").innerText =
+      params.get("id") || "N/A";
+
+    document.getElementById("name").innerText =
+      params.get("name") || "N/A";
+
+    document.getElementById("qty").innerText =
+      params.get("qty") || "N/A";
   </script>
 
 </body>
