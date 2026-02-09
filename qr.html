@@ -8,18 +8,18 @@
 
   <h2>Details</h2>
 
-  <p><b>Material ID:</b> <span id="id"></span></p>
-  <p><b>Material Name:</b> <span id="name"></span></p>
-  <p><b>Quantity:</b> <span id="qty"></span></p>
+  <p><span id="id"></span></p>
+  <p><span id="name"></span></p>
+  <p><span id="qty"></span></p>
 
   <script>
     const params = new URLSearchParams(window.location.search);
 
     document.getElementById("id").innerText =
-      params.get("id") || "N/A";
+      params.get("id") || "N/A" + "|" ;
 
     document.getElementById("name").innerText =
-      params.get("name") || "N/A";
+      params.get("name") || "N/A" + "|";
 
     document.getElementById("qty").innerText =
       params.get("qty") || "N/A";
