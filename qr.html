@@ -11,19 +11,17 @@
   <p><span id="id"></span></p>
   <p><span id="name"></span></p>
   <p><span id="qty"></span></p>
+  <p><span id="output"></span></p>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
 
-    document.getElementById("id").innerText =
-      params.get("id") || "N/A" + "|" ;
+  const id   = params.get("id")   || "N/A";
+  const name = params.get("name") || "N/A";
+  const qty  = params.get("qty")  || "N/A";
 
-    document.getElementById("name").innerText =
-      params.get("name") || "N/A" + "|";
-
-    document.getElementById("qty").innerText =
-      params.get("qty") || "N/A";
-  </script>
-
+  document.getElementById("output").innerText =
+    `${id}|${name}|${qty}|`;
+</script>
 </body>
 </html>
