@@ -348,14 +348,6 @@
                             </uxap:ObjectPageSection>
                         </uxap:sections>
                     </uxap:ObjectPageLayout>
-                    <Image
-                        width="200px"
-                        height="200px"
-                        src="{
-        path: 'localDataModel>/qrUrl',
-        formatter: '.formatQrCode'
-    }"
-                    />
                 </content>
             </Page>
         </pages>
